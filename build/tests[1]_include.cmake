@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build/tests[1]_tests.cmake")
+  include("/mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build/tests[1]_tests.cmake")
+else()
+  add_test(tests_NOT_BUILT tests_NOT_BUILT)
+endif()
