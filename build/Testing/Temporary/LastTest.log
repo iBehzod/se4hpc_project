@@ -1,10 +1,10 @@
-Start testing: May 20 08:08 UTC
+Start testing: May 20 14:55 UTC
 ----------------------------------------------------------
 1/6 Testing: Problem1.BalancedNum
 1/6 Test: Problem1.BalancedNum
 Command: "/mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build/tests" "--gtest_filter=Problem1.BalancedNum" "--gtest_also_run_disabled_tests"
 Directory: /mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build
-"Problem1.BalancedNum" start time: May 20 08:08 UTC
+"Problem1.BalancedNum" start time: May 20 14:55 UTC
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = Problem1.BalancedNum
@@ -19,10 +19,10 @@ Note: Google Test filter = Problem1.BalancedNum
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.06 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Problem1.BalancedNum" end time: May 20 08:08 UTC
+"Problem1.BalancedNum" end time: May 20 14:55 UTC
 "Problem1.BalancedNum" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -30,7 +30,7 @@ Test Passed.
 2/6 Test: Problem2.IsIsogram
 Command: "/mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build/tests" "--gtest_filter=Problem2.IsIsogram" "--gtest_also_run_disabled_tests"
 Directory: /mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build
-"Problem2.IsIsogram" start time: May 20 08:08 UTC
+"Problem2.IsIsogram" start time: May 20 14:55 UTC
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = Problem2.IsIsogram
@@ -45,10 +45,10 @@ Note: Google Test filter = Problem2.IsIsogram
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.05 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"Problem2.IsIsogram" end time: May 20 08:08 UTC
+"Problem2.IsIsogram" end time: May 20 14:55 UTC
 "Problem2.IsIsogram" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -56,7 +56,7 @@ Test Passed.
 3/6 Test: Problem3.PossiblyPerfect
 Command: "/mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build/tests" "--gtest_filter=Problem3.PossiblyPerfect" "--gtest_also_run_disabled_tests"
 Directory: /mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build
-"Problem3.PossiblyPerfect" start time: May 20 08:08 UTC
+"Problem3.PossiblyPerfect" start time: May 20 14:55 UTC
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = Problem3.PossiblyPerfect
@@ -71,10 +71,10 @@ Note: Google Test filter = Problem3.PossiblyPerfect
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.04 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Problem3.PossiblyPerfect" end time: May 20 08:08 UTC
+"Problem3.PossiblyPerfect" end time: May 20 14:55 UTC
 "Problem3.PossiblyPerfect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -82,7 +82,7 @@ Test Passed.
 4/6 Test: Problem4.FindOdd
 Command: "/mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build/tests" "--gtest_filter=Problem4.FindOdd" "--gtest_also_run_disabled_tests"
 Directory: /mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build
-"Problem4.FindOdd" start time: May 20 08:08 UTC
+"Problem4.FindOdd" start time: May 20 14:55 UTC
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = Problem4.FindOdd
@@ -100,7 +100,7 @@ Note: Google Test filter = Problem4.FindOdd
 Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Problem4.FindOdd" end time: May 20 08:08 UTC
+"Problem4.FindOdd" end time: May 20 14:55 UTC
 "Problem4.FindOdd" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -108,7 +108,7 @@ Test Passed.
 5/6 Test: Problem5.EncodeDecode
 Command: "/mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build/tests" "--gtest_filter=Problem5.EncodeDecode" "--gtest_also_run_disabled_tests"
 Directory: /mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build
-"Problem5.EncodeDecode" start time: May 20 08:08 UTC
+"Problem5.EncodeDecode" start time: May 20 14:55 UTC
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = Problem5.EncodeDecode
@@ -123,10 +123,10 @@ Note: Google Test filter = Problem5.EncodeDecode
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.06 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Problem5.EncodeDecode" end time: May 20 08:08 UTC
+"Problem5.EncodeDecode" end time: May 20 14:55 UTC
 "Problem5.EncodeDecode" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -134,7 +134,7 @@ Test Passed.
 6/6 Test: Problem6.Bananas
 Command: "/mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build/tests" "--gtest_filter=Problem6.Bananas" "--gtest_also_run_disabled_tests"
 Directory: /mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/build
-"Problem6.Bananas" start time: May 20 08:08 UTC
+"Problem6.Bananas" start time: May 20 14:55 UTC
 Output:
 ----------------------------------------------------------
 Note: Google Test filter = Problem6.Bananas
@@ -142,28 +142,18 @@ Note: Google Test filter = Problem6.Bananas
 [----------] Global test environment set-up.
 [----------] 1 test from Problem6
 [ RUN      ] Problem6.Bananas
-/mnt/c/Users/Bekhzod_I/Desktop/Laurea_magistrale_HPC/Sem_2/SE4HPC(DI NITTO)/se4hpc_project/tests/tests.cpp:31: Failure
-Expected equality of these values:
-  bananas("bbananana")
-    Which is: {}
-  expected
-    Which is: { "-b--anana", "-ban--ana", "-ba--nana", "-banan--a", "b---anana", "-banana--", "b-a--nana", "b-an--ana", "b-ana--na", "-bana--na", "b-anan--a", "b-anana--" }
-[  FAILED  ] Problem6.Bananas (0 ms)
+[       OK ] Problem6.Bananas (0 ms)
 [----------] 1 test from Problem6 (0 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] Problem6.Bananas
-
- 1 FAILED TEST
+[  PASSED  ] 1 test.
 <end of output>
-Test time =   0.04 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
-Test Failed.
-"Problem6.Bananas" end time: May 20 08:08 UTC
+Test Passed.
+"Problem6.Bananas" end time: May 20 14:55 UTC
 "Problem6.Bananas" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 20 08:08 UTC
+End testing: May 20 14:55 UTC

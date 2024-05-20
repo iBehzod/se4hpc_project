@@ -290,7 +290,79 @@ std::string decode(const std::string &str) {
 //     return {};
 // }
 
+void generateBananas(const std::string &s, int idx, int depth, std::vector<int> &positions, std::unordered_set<std::string> &results) {
+    static const std::string target = "banana";
+    if (depth == target.size()) {
+        std::string result(s.size(), '-');
+        for (int i = 0; i < positions.size(); ++i) {
+            result[positions[i]] = s[positions[i]];
+        }
+        results.insert(result);
+        return;
+    }
+    
+    for (int i = idx; i < s.size(); ++i) {
+        if (s[i] == target[depth]) {
+            positions[depth] = i;
+            generateBananas(s, i + 1, depth + 1, positions, results);
+        }
+    }
+}
 
+std::unordered_set<std::string> bananas(const std::string &s) {
+    std::unordered_set<std::string> results;
+    std::vector<int> positions(6); // "banana" has 6 letters
+    generateBananas(s, 0, 0, positions, results);
+    return results;
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// std::unordered_set<std::string> bananas(const std::string& s) {
+//     std::unordered_set<std::string> result;
+//     int n = s.length();
+
+//     // Iterate through all possible combinations of crossed-out letters
+//     for (int i = 0; i < (1 << n); ++i) {
+//         std::string banana = s;
+//         int countB = 0, countA = 0, countN = 0;
+//         int bananaIndex = 0;
+
+//         for (int j = 0; j < n; ++j) {
+//             // If the j-th bit of i is set, cross out the j-th letter
+//             if (i & (1 << j)) {
+//                 banana[j] = '-';
+//             } else {
+//                 // Check if the uncrossed letter contributes to forming "banana"
+//                 if (banana[j] == 'b' && countB < 1) {
+//                     banana[bananaIndex++] = banana[j];
+//                     countB++;
+//                 } else if (banana[j] == 'a' && countA < 3) {
+//                     banana[bananaIndex++] = banana[j];
+//                     countA++;
+//                 } else if (banana[j] == 'n' && countN < 2) {
+//                     banana[bananaIndex++] = banana[j];
+//                     countN++;
+//                 } else {
+//                     banana[j] = '-'; // Cross out if it doesn't contribute to "banana"
+//                 }
+//             }
+//         }
+
+//         // Add the formed "banana" to the result if it's valid
+//         if (countB == 1 && countA == 3 && countN == 2) {
+//             result.insert(banana);
+//         }
+//     }
+
+//     return result;
+// }
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // std::vector<std::string> bananas(std::string s) {
 //   std::vector<std::string> result;
 //   std::string banana = "banana";
@@ -319,8 +391,5 @@ std::string decode(const std::string &str) {
 
 //   return result;
 // }
-std::unordered_set<std::string> bananas(const std::string& s) {
-    // your code here
-    return {};
-}
+
 // ********************************************************************************************************
