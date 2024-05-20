@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <unordered_set>
+#include <iostream>
 
 // ############################### PROBLEM 1: Balanced Number [lvl 1] #############################################
 //  A balanced number is a number where the sum of digits to the left of the middle digit(s)
@@ -41,9 +42,29 @@
 
 std::string balancedNum(unsigned long long int number)
 {
-  // your code here
-  return "";
+  std::string numStr = std::to_string(number);
+  int numDigits = numStr.length();
+  int mid = numDigits / 2;
+  int leftSum = 0;
+  int rightSum = 0;
+
+  for (int i = 0; i < mid; ++i) {
+    leftSum += numStr[i] - '0';
+  }
+
+  for (int i = numDigits - 1; i >= mid + (numDigits % 2); --i) {
+    rightSum += numStr[i] - '0';
+  }
+
+  return (leftSum == rightSum) ? "Balanced" : "Not Balanced";
 }
+
+
+// std::string balancedNum(unsigned long long int number)
+// {
+//   // your code here
+//   return "";
+// }
 
 // ********************************************************************************************************
 
@@ -57,9 +78,22 @@ std::string balancedNum(unsigned long long int number)
 // "moOse" --> false (ignore letter case)
 
 bool is_isogram(std::string str) {
-  // your code here
-  return false;
+  std::unordered_set<char> seenLetters;
+  for (char c : str) {
+    char lowerC = std::tolower(c);
+    if (seenLetters.count(lowerC) > 0) {
+      return false;
+    }
+    seenLetters.insert(lowerC);
+  }
+  return true;
 }
+
+
+// bool is_isogram(std::string str) {
+//   // your code here
+//   return false;
+// }
 
 // ********************************************************************************************************
 
@@ -125,9 +159,26 @@ bool possibly_perfect(const std::vector<char>& key, const std::vector<char>& ans
 
 int findOdd(const std::vector<int> &numbers)
 {
-  // your code here
-  return 1;
+  int result = 0;
+  for (int num : numbers) {
+    result ^= num;
+  }
+  return result;
 }
+
+// Explanation:
+// This solution utilizes the bitwise XOR operator (^) to efficiently find the odd-occurring number. Here's how it works:
+// Initialization: result is initialized to 0.
+// XOR Iteration: The code iterates through each number in the numbers vector. For each num:
+// result ^= num performs a bitwise XOR operation between the current value of result and num.
+// XOR Properties: The XOR operation has the following properties:
+// a ^ a = 0 (XORing a number with itself results in 0)
+// 0 ^ a = a (XORing 0 with a number results in the number itself)
+// XOR is associative and commutative (order doesn't matter)
+// Finding the Odd One Out: Due to these properties, as we XOR all the numbers together:
+// Numbers occurring an even number of times will cancel themselves out (e.g., 2 ^ 2 ^ 2 ^ 2 = 0).
+// The number occurring an odd number of times will remain in the result variable.
+// Return: The final value of result will be the number that appeared an odd number of times in the input vector.
 
 // ********************************************************************************************************
 
@@ -147,14 +198,53 @@ int findOdd(const std::vector<int> &numbers)
 // For the sake of simplicity, you can assume that any numbers passed into the function will correspond to vowels.
 
 std::string encode(const std::string &str) {
-  // your code here
-  return "";
+  std::string result = str;
+  for (int i = 0; i < result.length(); ++i) {
+    switch (result[i]) {
+      case 'a': result[i] = '1'; break;
+      case 'e': result[i] = '2'; break;
+      case 'i': result[i] = '3'; break;
+      case 'o': result[i] = '4'; break;
+      case 'u': result[i] = '5'; break;
+    }
+  }
+  return result;
 }
 
 std::string decode(const std::string &str) {
-  // your code here
-  return "";
+  std::string result = str;
+  for (int i = 0; i < result.length(); ++i) {
+    switch (result[i]) {
+      case '1': result[i] = 'a'; break;
+      case '2': result[i] = 'e'; break;
+      case '3': result[i] = 'i'; break;
+      case '4': result[i] = 'o'; break;
+      case '5': result[i] = 'u'; break;
+    }
+  }
+  return result;
 }
+
+// Explanation:
+// encode(const std::string &str):
+// Creates an empty string result to store the encoded string.
+// Iterates through each character c in the input string str.
+// Uses a switch statement to check if c is a lowercase vowel:
+// If it's a vowel, append the corresponding number to result.
+// If it's not a vowel, append the character c itself to result.
+// Returns the encoded string result.
+// decode(const std::string &str):
+// Works similarly to encode, but in reverse.
+// Creates an empty string result to store the decoded string.
+// Iterates through each character c in the input string str.
+// Uses a switch statement to check if c is a vowel number ('1' to '5'):
+// If it's a vowel number, append the corresponding lowercase vowel to result.
+// If it's not a vowel number, append the character c itself to result.
+// Returns the decoded string result.
+// This approach is more memory-efficient as it avoids creating a copy of the entire input string.
+
+
+
 
 // ********************************************************************************************************
 
@@ -194,9 +284,43 @@ std::string decode(const std::string &str) {
 // You must return all possible bananas, but the order does not matter
 // The example output above is formatted for readability. Please refer to the example tests for expected format of your result.
 
+
+// std::unordered_set<std::string> bananas(const std::string& s) {
+//     // your code here
+//     return {};
+// }
+
+
+// std::vector<std::string> bananas(std::string s) {
+//   std::vector<std::string> result;
+//   std::string banana = "banana";
+//   int sLen = s.length();
+
+//   for (int i = 0; i < (1 << sLen); ++i) { // Iterate through all possible combinations of crossed-out letters
+//     std::string temp = s;
+//     int bananaIndex = 0;
+//     bool validBanana = true;
+
+//     for (int j = 0; j < sLen; ++j) {
+//       if ((i >> j) & 1) { // Check if the j-th bit in i is set (meaning the j-th letter is crossed out)
+//         temp[j] = '-';
+//       } else if (bananaIndex < 6 && temp[j] == banana[bananaIndex]) {
+//         bananaIndex++;
+//       } else {
+//         validBanana = false;
+//         break;
+//       }
+//     }
+
+//     if (validBanana && bananaIndex == 6) {
+//       result.push_back(temp);
+//     }
+//   }
+
+//   return result;
+// }
 std::unordered_set<std::string> bananas(const std::string& s) {
     // your code here
     return {};
 }
-
 // ********************************************************************************************************
